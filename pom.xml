@@ -10,13 +10,16 @@
     <description>Public config for OpenSource Library</description>
 
     <modules>
-        <module>aj-framework/aj-common-parent</module>
-        <module>aj-framework/aj-json</module>
-        <module>aj-framework/aj-framework</module>
-        <module>aj-framework/aj-web</module>
-
-        <module>aj-workflow</module>
-        <module>aj-iam</module>
+        <module>aj-common-parent</module>
+        <module>aj-util</module>
+        <module>aj-json</module>
+        <module>aj-net</module>
+        <module>aj-json</module>
+        <module>aj-web</module>
+        <module>aj-data</module>
+        <module>aj-lightweight-springboot</module>
+        <module>aj-dataservice</module>
+        <module>aj-framework</module>
     </modules>
 
     <properties>
