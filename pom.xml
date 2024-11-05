@@ -15,7 +15,7 @@
         <!--<tomcat.version>8.5.96</tomcat.version>-->
         <tomcat.version>8.5.100</tomcat.version>
        <!-- <spring.version>5.3.31</spring.version>-->
-        <spring.version>5.3.37</spring.version>
+        <spring.version>5.3.39</spring.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml><!-- Servlet3 不需要 web.xml 问题 -->
