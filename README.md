@@ -1,2 +1,2 @@
 # aj-parent-pom
-Parent Maven POM
+Public config for OpenSource Library
