@@ -5,16 +5,14 @@
     <groupId>com.ajaxjs</groupId>
     <artifactId>ajaxjs-parent</artifactId>
     <name>aj-parent</name>
-    <version>1.20</version>
+    <version>1.21</version>
     <packaging>pom</packaging>
     <description>Public config for OpenSource Library</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version><!-- IDEA Maven 插件默认 Java 1.5 编译，这里强制声明一下 -->
-        <!--<tomcat.version>8.5.96</tomcat.version>-->
         <tomcat.version>8.5.100</tomcat.version>
-       <!-- <spring.version>5.3.31</spring.version>-->
         <spring.version>5.3.39</spring.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -204,8 +202,15 @@
         <!-- 模拟对象 -->
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>2.0.2-beta</version>
+            <artifactId>mockito-core</artifactId>
+            <version>4.5.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>4.5.1</version>
             <scope>test</scope>
         </dependency>
 
