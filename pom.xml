@@ -7,13 +7,12 @@
     <name>aj-parent</name>
     <version>1.21</version>
     <packaging>pom</packaging>
-    <description>Public config for OpenSource Library</description>
+    <description>Public Maven config for AJAXJS OpenSource Library</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version><!-- IDEA Maven 插件默认 Java 1.5 编译，这里强制声明一下 -->
-        <tomcat.version>8.5.100</tomcat.version>
-        <spring.version>5.3.39</spring.version>
+        <springboot.version>2.7.18</springboot.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml><!-- Servlet3 不需要 web.xml 问题 -->
@@ -54,7 +53,6 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
- 
 
     <!-- maven 的 pom.xml 多个仓库配置 -->
     <profiles>
@@ -176,27 +174,12 @@
 
     <!-- 公共依赖 -->
     <dependencies>
-        <!-- 通用日志接口-->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.36</version>
-        </dependency>
-
         <!-- LOMBOK 注解 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.34</version>
             <scope>provided</scope>
-        </dependency>
-
-        <!-- 单元测试 -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
         </dependency>
 
         <!-- 模拟对象 -->
@@ -216,16 +199,25 @@
 
         <!-- Spring 测试 -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <version>2.7.18</version>
         </dependency>
 
-        <dependency>
+ <!--       <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+
+        <!-- 编译为 jar 包时依赖的 -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>4.0.4</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
